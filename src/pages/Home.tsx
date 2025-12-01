@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Home() {
+  const [date, setDate] = useState('');
+  const [hours, setHours] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleDateChange = (e) => setDate(e.target.value);
+  const handleHoursChange = (e) => setHours(e.target.value);
+  const handleDescriptionChange = (e) => setDescription(e.target.value);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center">
       <div className="text-center">

@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Description</label>
-            <textarea className="w-full mt-1 p-2 border rounded" placeholder="Enter description"></textarea>
+            <textarea className="w-full mt-1 p-2 border rounded" placeholder="Enter description" value={description} onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleDescriptionChange(e)}></textarea>
           </div>
           <div className="flex justify-between">
             <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>

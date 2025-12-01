@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center">
       <div className="text-center">
-        <form className="bg-white p-6 rounded shadow-md w-full max-w-md">
+        <form className="bg-white p-6 rounded shadow-md w-full max-w-md" onSubmit={handleSubmit}>
           <h2 className="text-2xl font-bold mb-4">Time Sheet</h2>
           <div className="mb-4">
             <label className="block text-gray-700">Date</label>

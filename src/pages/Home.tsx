@@ -13,6 +13,14 @@ export default function Home() {
     setError('');
     // Handle form submission logic here
     console.log('Form submitted:', { date, hours, description });
+    // Example: Store data in local storage
+    const entries = JSON.parse(localStorage.getItem('timeEntries') || '[]');
+    entries.push({ date, hours, description });
+    localStorage.setItem('timeEntries', JSON.stringify(entries));
+    // Clear form
+    setDate('');
+    setHours('');
+    setDescription('');
   };
   const [hours, setHours] = useState('');
   const [description, setDescription] = useState('');

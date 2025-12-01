@@ -2,6 +2,18 @@ import { useState } from 'react'
 
 export default function Home() {
   const [date, setDate] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!date || !hours || !description) {
+      setError('All fields are required.');
+      return;
+    }
+    setError('');
+    // Handle form submission logic here
+    console.log('Form submitted:', { date, hours, description });
+  };
   const [hours, setHours] = useState('');
   const [description, setDescription] = useState('');
 

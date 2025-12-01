@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Hours Worked</label>
-            <input type="number" className="w-full mt-1 p-2 border rounded" placeholder="Enter hours" />
+            <input type="number" className="w-full mt-1 p-2 border rounded" placeholder="Enter hours" value={hours} onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleHoursChange(e)} />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Description</label>
